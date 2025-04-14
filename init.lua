@@ -28,7 +28,7 @@ vim.api.nvim_set_keymap("v", "<sc-c>", '"+y', { noremap = true }) -- Select line
 vim.api.nvim_set_keymap("i", "<sc-v>", '<ESC>"+p', { noremap = true }) -- Paste in insert mode (CTRL+Shift+C)
 vim.api.nvim_set_keymap("n", "<sc-v>", '"+p', { noremap = true }) -- Paste in normal mode (CTRL+Shift+C)
 
- -- Optional, you don't have to run setup.
+--  Optional, you don't have to run setup.
 -- require("transparent").setup({
 --   -- table: default groups
 --   groups = {
@@ -77,4 +77,5 @@ vim.api.nvim_set_keymap('n', '<Leader>lr', '<Cmd>lua vim.lsp.buf.rename()<CR>', 
 vim.api.nvim_set_keymap('n', '<Leader>lg', '<Cmd>RunCode<CR>', { noremap = true, silent = true })
 
 
-vim.cmd.colorscheme "catppuccin-mocha"
+vim.cmd.colorscheme "rose-pine-main"
+
