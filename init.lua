@@ -65,6 +65,7 @@ require("lspconfig")["basedpyright"].setup({
         reportArgumentType = 'error',
         reportUnknownMemberType = 'error',
         reportAssignmentType = 'error',
+        reportIncompatibleMethodOverride = true,
       },
     },
   },
