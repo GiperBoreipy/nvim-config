@@ -19,6 +19,7 @@
   "code_runner.nvim": { "branch": "main", "commit": "65218f8f646fe61e506090522df357539642ae83" },
   "dressing.nvim": { "branch": "master", "commit": "3a45525bb182730fe462325c99395529308f431e" },
   "everforest-nvim": { "branch": "main", "commit": "616864c0c534b1eaf650ef913512dcde80ababfb" },
+  "flexoki": { "branch": "main", "commit": "975654bce67514114db89373539621cff42befb5" },
   "friendly-snippets": { "branch": "main", "commit": "efff286dd74c22f731cdec26a70b46e5b203c619" },
   "gitsigns.nvim": { "branch": "main", "commit": "0b04035bb7b3c83e999b9676e2fb46fd0aa9f910" },
   "gruvbox.nvim": { "branch": "main", "commit": "68c3460a5d1d1a362318960035c9f3466d5011f5" },
