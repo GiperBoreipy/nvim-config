@@ -77,5 +77,4 @@ vim.api.nvim_set_keymap('n', '<Leader>lr', '<Cmd>lua vim.lsp.buf.rename()<CR>', 
 
 vim.api.nvim_set_keymap('n', '<Leader>lg', '<Cmd>RunCode<CR>', { noremap = true, silent = true })
 
-
-vim.cmd[[colorscheme tokyonight-night]]
+vim.cmd 'colorscheme material-deep-ocean'
