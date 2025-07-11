@@ -22,7 +22,8 @@ require "polish"
 
 vim.o.wrap = true
 
-vim.g.neovide_scale_factor = 0.72
+-- vim.g.neovide_scale_factor = 1
+vim.o.guifont = "JetBrainsMono_Nerd_Font_Mono:h10:b"
 
 vim.api.nvim_set_keymap("v", "<sc-c>", '"+y', { noremap = true }) -- Select line(s) in visual mode and copy (CTRL+Shift+V)
 vim.api.nvim_set_keymap("i", "<sc-v>", '<ESC>"+p', { noremap = true }) -- Paste in insert mode (CTRL+Shift+C)
@@ -77,4 +78,5 @@ vim.api.nvim_set_keymap('n', '<Leader>lr', '<Cmd>lua vim.lsp.buf.rename()<CR>', 
 
 vim.api.nvim_set_keymap('n', '<Leader>lg', '<Cmd>RunCode<CR>', { noremap = true, silent = true })
 
-vim.cmd 'colorscheme catppuccin-mocha'
+vim.cmd 'colorscheme material-palenight'
+ 
