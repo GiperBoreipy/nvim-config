@@ -21,33 +21,15 @@ require "polish"
 
 
 vim.o.wrap = true
-
--- vim.g.neovide_scale_factor = 1
 vim.o.guifont = "JetBrainsMono_Nerd_Font_Mono:h10:b"
+
+vim.cmd 'colorscheme rose-pine'
 
 vim.api.nvim_set_keymap("v", "<sc-c>", '"+y', { noremap = true }) -- Select line(s) in visual mode and copy (CTRL+Shift+V)
 vim.api.nvim_set_keymap("i", "<sc-v>", '<ESC>"+p', { noremap = true }) -- Paste in insert mode (CTRL+Shift+C)
 vim.api.nvim_set_keymap("n", "<sc-v>", '"+p', { noremap = true }) -- Paste in normal mode (CTRL+Shift+C)
-
---  Optional, you don't have to run setup.
--- require("transparent").setup({
---   -- table: default groups
---   groups = {
---     'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier',
---     'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
---     'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
---     'SignColumn', 'CursorLine', 'CursorLineNr', 'StatusLine', 'StatusLineNC',
---     'EndOfBuffer',
---   },
---   -- table: additional groups that should be cleared
---   extra_groups = {},
---   -- table: groups you don't want to clear
---   exclude_groups = {},
---   -- function: code to be executed after highlight groups are cleared
---   -- Also the user event "TransparentClear" will be triggered
---   on_clear = function() end,
--- })
-
+vim.api.nvim_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>lr', '<Cmd>lua vim.lsp.buf.rename()<CR>', { noremap = true, silent = true })
 
 require("lspconfig")["basedpyright"].setup({
   settings = { 
@@ -73,10 +55,3 @@ require("lspconfig")["basedpyright"].setup({
 })
 
 
-vim.api.nvim_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>lr', '<Cmd>lua vim.lsp.buf.rename()<CR>', { noremap = true, silent = true })
-
-vim.api.nvim_set_keymap('n', '<Leader>lg', '<Cmd>RunCode<CR>', { noremap = true, silent = true })
-
-vim.cmd 'colorscheme material-palenight'
- 
